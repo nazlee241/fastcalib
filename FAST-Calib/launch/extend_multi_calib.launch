@@ -1,0 +1,38 @@
+<launch>
+  <arg name="rviz" default="true"/>
+  
+  <!-- Load QR parameters from config file -->
+  <rosparam file="$(find fast_calib)/config/qr_params.yaml" command="load" subst_value="true"/>
+  
+  <!-- Multi-scene calibration node -->
+  <node pkg="fast_calib" type="multi_fast_calib" name="multi_fast_calib" output="screen">
+    <!-- List all your scene directories -->
+    <param name="scene_paths" 
+           value="/home/amt4/fastcalib_ws/src/FAST-Calib/output/sample_2/left;
+                  /home/amt4/fastcalib_ws/src/FAST-Calib/output/sample_2/front;
+                  /home/amt4/fastcalib_ws/src/FAST-Calib/output/sample_2/right" />
+    
+    <!-- Output directory for multi-scene results -->
+    <param name="output_path" 
+           value="/home/amt4/fastcalib_ws/src/FAST-Calib/output/multi_scene_result/" />
+    
+    <!-- Calibration board parameters -->
+    <param name="marker_size" value="0.0652" />
+    <param name="delta_width_qr_center" value="0.3655" />
+    <param name="delta_height_qr_center" value="0.1475" />
+    <param name="delta_width_circles" value="0.42" />
+    <param name="delta_height_circles" value="0.29" />
+    <param name="circle_radius" value="0.10" />
+    
+    <!-- Optimization parameters -->
+    <param name="optimize_iterations" value="100" />
+    <param name="convergence_threshold" value="1e-6" />
+    <param name="verbose" value="true" />
+  </node>
+
+  <!-- RViz visualization -->
+  <group if="$(arg rviz)">
+    <node pkg="rviz" type="rviz" name="rviz" 
+          args="-d $(find fast_calib)/rviz_cfg/fast_livo2.rviz" />
+  </group>
+</launch>

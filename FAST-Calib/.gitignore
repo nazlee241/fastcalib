@@ -1,0 +1,15 @@
+calib_data/*
+output/sample_1
+output/sample_2
+output/sample_3
+output/sample_4
+output/sample_5
+output/sample_6
+build/*
+devel/*
+scripts/sample_1
+scripts/sample_2
+scripts/sample_3
+scripts/sample_4
+scripts/sample_5
+scripts/sample_6

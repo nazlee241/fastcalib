@@ -1,0 +1,72 @@
+
+
+# Camera intrinsics 
+  cam_model: Pinhole
+  cam_width: 960
+  cam_height: 540
+
+  # #camera ZED2i
+  fx: 527.91962
+  fy: 527.91962
+  cx: 477.26453
+  cy: 277.57013
+  k1: 0 
+  k2: 0 
+  p1: 0 
+  p2: 0  
+
+#======================================================
+# # Calibration target parameters Nazlee
+  marker_size: 0.07 #0.20 # ArUco marker size (our test data uses 0.16m; adjust to match your marker size)
+  delta_width_qr_center: 0.36 #0.55 # Half the distance between the centers of two markers in the horizontal direction 
+  delta_height_qr_center: 0.24 #0.35 # Half the distance between the centers of two markers in the vertical direction
+  delta_width_circles: 0.42 #0.5 # Distance between the centers of two circles in the horizontal direction
+  delta_height_circles: 0.29 #0.4 # Distance between the centers of two circles in the vertical direction
+  circle_radius: 0.10 # Radius of the circle 
+
+
+  x_min: 2.4
+  x_max: 3.0
+  y_min: -0.7
+  y_max: 0.6
+  z_min: -0.2
+  z_max: 0.5
+
+  #======================================================
+# Input
+  lidar_topic: "/ouster/points" # /ouster/points /livox/lidar
+  bag_path: "/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_6/ous_1.bag" #"/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_4/front_1.bag" 
+  image_path: "/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_6/ous_1.jpg" #"/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_4/front_1.jpg" 
+  output_path: "$(find fast_calib)/output/sample_6/ous_1"
+
+
+# # Kak sarah Calibration target parameters
+#   marker_size: 0.08     # ArUco marker size 0.08
+#   delta_width_qr_center: 0.27  # Half distance between marker centers (horizontal) 0.275 
+#   delta_height_qr_center: 0.19 # Half distance between marker centers (vertical) 0.195
+#   delta_width_circles: 0.31      # Distance between circle centers (horizontal) 0.31 
+#   delta_height_circles: 0.23    # Distance between circle centers (vertical)  0.23 
+#   circle_radius: 0.075          # Circle radius
+# #======================================================
+
+#   # Kaksarah Distance filter
+#   x_min: 1.3  # avia and mid360: 2.0, ouster: 1.5
+#   x_max: 1.8
+#   y_min: -0.5
+#   y_max: 0.6
+#   z_min: -0.4   # avia and mid360: -0.5, ouster: -0.8
+#   z_max: 0.5
+
+# #======================================================
+
+#   # camera Kak sarah
+#   fx: 266.37982177734375
+#   fy: 266.37982177734375
+#   cx: 324.980224609375
+#   cy: 190.34490966796875
+#   k1: 0.0
+#   k2: 0.0
+#   p1: 0.0
+#   p2: 0.0
+
+
