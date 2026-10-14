@@ -6,10 +6,10 @@
   cam_height: 540
 
   # #camera ZED2i
-  fx: 527.91962
-  fy: 527.91962
-  cx: 477.26453
-  cy: 277.57013
+  fx: 528.06915
+  fy: 528.06915
+  cx: 477.26483
+  cy: 277.57019
   k1: 0 
   k2: 0 
   p1: 0 
@@ -25,19 +25,19 @@
   circle_radius: 0.10 # Radius of the circle 
 
 
-  x_min: 2.4
-  x_max: 3.0
-  y_min: -0.7
-  y_max: 0.6
-  z_min: -0.2
-  z_max: 0.5
+  x_min: 2.68
+  x_max: 3.16
+  y_min: -0.45
+  y_max: 0.74
+  z_min: -0.43
+  z_max: 0.45
 
   #======================================================
 # Input
   lidar_topic: "/ouster/points" # /ouster/points /livox/lidar
-  bag_path: "/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_6/ous_1.bag" #"/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_4/front_1.bag" 
-  image_path: "/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_6/ous_1.jpg" #"/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_4/front_1.jpg" 
-  output_path: "$(find fast_calib)/output/sample_6/ous_1"
+  bag_path: "/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_9/for_calib/front.bag" #"/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_4/front_1.bag" 
+  image_path: "/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_9/for_calib/front.jpg" #"/home/amt4/Documents/master_nazlee/checkerboard_calib_bag/sample_4/front_1.jpg" 
+  output_path: "$(find fast_calib)/output/sample_7/front_ous"
 
 
 # # Kak sarah Calibration target parameters

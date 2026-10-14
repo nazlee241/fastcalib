@@ -1,0 +1,15 @@
+# 4 selected points (x y z)
+# Format: x y z
+# Point index (in original cloud) and coordinates:
+2.891993 0.510436 -0.239343  # index: 2768452
+2.887347 -0.258126 -0.235761  # index: 3045650
+2.965478 -0.231432 0.259824  # index: 2999786
+2.923119 0.542207 0.224066  # index: 1888999
+
+# Range values with 0.2m expansion:
+x_min: 2.687347
+x_max: 3.165478
+y_min: -0.458126
+y_max: 0.742207
+z_min: -0.439343
+z_max: 0.459824

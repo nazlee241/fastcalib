@@ -35,21 +35,24 @@ class OptimizedLidarImageOverlay:
         
         # Transformation matrix
         self.Rcl = np.array([
-            [-0.130379, -0.991454,  0.004591],
-            [-0.076312,  0.005418, -0.997069],
-            [ 0.988523, -0.130348, -0.076366]
+            # [-0.130379, -0.991454,  0.004591],
+            # [-0.076312,  0.005418, -0.997069],
+            # [ 0.988523, -0.130348, -0.076366]
+            [ -0.080003,  -0.996782,   0.005132],
+            [0.014233,  -0.006290,  -0.999879],
+            [0.996693,  -0.079920,   0.014690]
         ], dtype=np.float64)
-        self.tcl = np.array([0.388071, 0.364550, -0.125440], dtype=np.float64)
+        self.tcl = np.array([0.253684, 0.103372, -0.090891], dtype=np.float64)
         
         # Pre-allocate arrays for speed
         self.cache_K = None
         self.cache_imsize = None
         
         # Visualization params
-        self.point_size = rospy.get_param("~point_size", 2)  # Smaller points for speed
+        self.point_size = rospy.get_param("~point_size", 4)  # Smaller points for speed
         self.min_depth = rospy.get_param("~min_depth", 0.5)
-        self.max_depth = rospy.get_param("~max_depth", 20.0)
-        
+        self.max_depth = rospy.get_param("~max_depth", 40.0) #40
+
         # Publishers and subscribers
         self.pub = rospy.Publisher(self.output_topic, Image, queue_size=5)
         
